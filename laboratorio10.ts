@@ -170,9 +170,9 @@ class RBTree {
         let current = this.root;
         while (current !== this.leaf && current.getData() !== data) {
             if (data < current.getData()) {
-                current = current.getLeftChild() as NodeRBT;
+                current = current.getLeftChild() ;
             } else {
-                current = current.getRightChild() as NodeRBT;
+                current = current.getRightChild() ;
             }
         }
         if(current === this.leaf) return null
@@ -200,7 +200,7 @@ rbTree.insert(5);
 rbTree.insert(15);
 rbTree.insert(115);
 //aqui le puse un numero para que viera el metodo buscar si busca bien 
-const datoAbuscar = rbTree.buscar(115);
+const datoAbuscar = rbTree.buscar(20);
 if(datoAbuscar){
   console.log(`El numero si existe: ${datoAbuscar.getData()}`)
 }else{
